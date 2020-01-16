@@ -6,11 +6,8 @@ module.exports = {
   parser: 'babel-eslint',
   extends: [
     'airbnb',
+    'plugin:jest/recommended',
   ],
-  globals: {
-    Atomics: 'readonly',
-    SharedArrayBuffer: 'readonly',
-  },
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
@@ -20,5 +17,6 @@ module.exports = {
   },
   plugins: [
     'react',
+    'jest',
   ],
 };

@@ -8,9 +8,9 @@ const stopButton = 'button.button-style.stop';
 const resetButton = 'button.button-style.reset';
 
 describe('Timer App', () => {
-  it('render buttons depending of timer state', () => {
+  it('render start button on first load', () => {
     const wrapper = mount(<App />);
-  
+
     const startButtonElement = wrapper.find(startButton);
     expect(startButtonElement).toHaveLength(1);
 
@@ -29,7 +29,7 @@ describe('Timer App', () => {
 
   it('render buttons depending of timer state', () => {
     const wrapper = mount(<App />);
-  
+
     expect(wrapper.find(startButton)).toHaveLength(1);
     expect(wrapper.find(stopButton)).toHaveLength(0);
     expect(wrapper.find(resetButton)).toHaveLength(0);
@@ -38,7 +38,7 @@ describe('Timer App', () => {
 
     expect(wrapper.find(startButton)).toHaveLength(0);
     expect(wrapper.find(stopButton)).toHaveLength(1);
-    expect(wrapper.find(resetButton)).toHaveLength(0)
+    expect(wrapper.find(resetButton)).toHaveLength(0);
 
     wrapper.find(stopButton).simulate('click');
 
@@ -57,7 +57,7 @@ describe('Timer App', () => {
 
   it('reset timer on click reset button', () => {
     const wrapper = mount(<App />);
-    jest.useFakeTimers()
+    jest.useFakeTimers();
 
     expect(wrapper.state().isTimerWorking).toBe(false);
     expect(wrapper.state().isTimePaused).toBe(false);

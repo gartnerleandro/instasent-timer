@@ -8,13 +8,13 @@ describe('TimerButtons', () => {
     const onStartPress = jest.fn();
     const onStopPress = jest.fn();
     const onResetPress = jest.fn();
-  
+
     const wrapper = shallow(
       <TimerButtons
         onStartPress={onStartPress}
         onStopPress={onStopPress}
         onResetPress={onResetPress}
-      />
+      />,
     );
 
     const startButtonElement = wrapper.find('.start');
@@ -26,13 +26,13 @@ describe('TimerButtons', () => {
     const onStartPress = jest.fn();
     const onStopPress = jest.fn();
     const onResetPress = jest.fn();
-  
+
     const wrapper = shallow(
       <TimerButtons
         onStartPress={onStartPress}
         onStopPress={onStopPress}
         onResetPress={onResetPress}
-      />
+      />,
     );
 
     const startButtonElement = wrapper.find('.start');

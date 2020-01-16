@@ -44,7 +44,7 @@ class App extends Component {
       isTimePaused: false,
     });
   };
-  
+
   render() {
     const { currentTime, isTimePaused, isTimerWorking } = this.state;
 
@@ -79,4 +79,4 @@ class App extends Component {
   }
 }
 
-export default App
+export default App;

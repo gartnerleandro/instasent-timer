@@ -2,4 +2,3 @@
 const formatTime = (time) => (`0${time}`).slice(-2);
 
 export default formatTime;
-
